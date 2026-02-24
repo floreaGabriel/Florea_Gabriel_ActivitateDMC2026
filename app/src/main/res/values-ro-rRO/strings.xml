@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">labs</string>
+    <string name="welcome_text">Salutare!</string>
+    <string name="new_text">Salutare Boss!</string>
+
+    <string name="name_text">Numele tau</string>
+    <string name="btn_text">Apasa-ma</string>
+</resources>
