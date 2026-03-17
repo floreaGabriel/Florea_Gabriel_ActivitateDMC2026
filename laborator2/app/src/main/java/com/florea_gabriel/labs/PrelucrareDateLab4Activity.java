@@ -3,6 +3,7 @@ package com.florea_gabriel.labs;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -13,12 +14,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class PrelucrareDateLab4Activity extends AppCompatActivity {
 
     EditText editTextName, editTextProfit;
     RadioButton radioButtonFalimentDa, radioButtonFalimentNu;
     CheckBox checkBox4, checkBox5, checkBox6;
     Button button5;
+    CalendarView calendarView;
+    int an, luna, zi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +47,18 @@ public class PrelucrareDateLab4Activity extends AppCompatActivity {
         checkBox4 = findViewById(R.id.checkBox4);
         checkBox5 = findViewById(R.id.checkBox5);
         checkBox6 = findViewById(R.id.checkBox6);
+
+        calendarView = findViewById(R.id.calendarView2);
+        Calendar calendar = Calendar.getInstance();
+        an = calendar.get(Calendar.YEAR);
+        luna = calendar.get(Calendar.MONTH);
+        zi = calendar.get(Calendar.DAY_OF_MONTH);
+
+        calendarView.setOnDateChangeListener((view, year, month, day) -> {
+            an = year;
+            luna = month;
+            zi = day;
+        });
 
         button5 = findViewById(R.id.button5);
 
@@ -65,7 +83,11 @@ public class PrelucrareDateLab4Activity extends AppCompatActivity {
                 tipMagazin = GFMagazin.TipMagazin.COMPUTERS;
             }
 
-            GFMagazin magazin = new GFMagazin(nume, faliment, profit, tipMagazin);
+            Calendar calendarSelectat = Calendar.getInstance();
+            calendarSelectat.set(an, luna, zi);
+            Date dataSelectata = calendarSelectat.getTime();
+
+            GFMagazin magazin = new GFMagazin(nume, faliment, profit, tipMagazin, dataSelectata);
 
             Intent intent = new Intent();
             intent.putExtra("magazin", magazin);
