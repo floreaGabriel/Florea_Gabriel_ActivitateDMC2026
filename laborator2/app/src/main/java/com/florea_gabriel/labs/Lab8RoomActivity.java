@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lab5RoomActivity extends AppCompatActivity {
+public class Lab8RoomActivity extends AppCompatActivity {
 
     MagazinDatabase db;
     MagazinDao dao;
@@ -31,7 +31,7 @@ public class Lab5RoomActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lab5_room);
+        setContentView(R.layout.activity_lab8_room);
 
         db = MagazinDatabase.getInstance(this);
         dao = db.magazinDao();

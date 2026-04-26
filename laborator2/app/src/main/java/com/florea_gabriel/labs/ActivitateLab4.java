@@ -50,6 +50,7 @@ public class ActivitateLab4 extends AppCompatActivity {
         listViewMagazine = findViewById(R.id.listView);
         Button btnSettings = findViewById(R.id.buttonSettings);
         Button btnLab5Room = findViewById(R.id.buttonLab5Room);
+        Button btnLab6Imagini = findViewById(R.id.buttonLab6Imagini);
 
         adapter = new MagazinAdapter(this, magazine);
 
@@ -67,7 +68,12 @@ public class ActivitateLab4 extends AppCompatActivity {
         });
 
         btnLab5Room.setOnClickListener(v -> {
-            Intent intent = new Intent(ActivitateLab4.this, Lab5RoomActivity.class);
+            Intent intent = new Intent(ActivitateLab4.this, Lab8RoomActivity.class);
+            startActivity(intent);
+        });
+
+        btnLab6Imagini.setOnClickListener(v -> {
+            Intent intent = new Intent(ActivitateLab4.this, Lab9ImageActivity.class);
             startActivity(intent);
         });
 
