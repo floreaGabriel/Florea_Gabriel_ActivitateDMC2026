@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lab 5 - ROOM Database"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Sectiune adaugare -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adauga magazin nou:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editNume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nume magazin"
+            android:inputType="text"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/editProfit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Profit (numar)"
+            android:inputType="number"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/editTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tip (MEDICAL / ELECTRONICS / COMPUTERS)"
+            android:inputType="text"
+            android:layout_marginBottom="6dp" />
+
+        <CheckBox
+            android:id="@+id/checkFaliment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Faliment"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnInsert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inserare in BD (Metoda 1)"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Sectiune filtrare -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filtrare dupa profit (interval):"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editProfitMin"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Profit min"
+                android:inputType="number"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/editProfitMax"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Profit max"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnFiltreazaProfit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filtrare dupa profit (Metoda 4)"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Cautare dupa nume -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cautare dupa nume exact:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editCautareNume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nume exact"
+            android:inputType="text"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnCautareNume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cauta dupa nume (Metoda 3)"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Stergere dupa profit -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sterge magazine cu profit > valoare:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editProfitStergere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Profit maxim (se sterg cele mai mari)"
+            android:inputType="number"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnSterge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sterge dupa profit (Metoda 5)"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Increment profit dupa litera -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Creste profit +1 pentru magazine ce incep cu litera:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editLitera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Litera (ex: A)"
+            android:inputType="text"
+            android:maxLength="1"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnIncrementProfit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Creste profit +1 (Metoda 6)"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Afisare toate -->
+        <Button
+            android:id="@+id/btnAfisareTot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Afiseaza toate (Metoda 2)"
+            android:layout_marginBottom="8dp" />
+
+        <ListView
+            android:id="@+id/listViewRoom"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+    </LinearLayout>
+</ScrollView>

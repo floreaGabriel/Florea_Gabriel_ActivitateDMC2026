@@ -35,6 +35,9 @@
         <activity
             android:name=".SettingsActivity"
             android:exported="false"/>
+        <activity
+            android:name=".Lab5RoomActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
