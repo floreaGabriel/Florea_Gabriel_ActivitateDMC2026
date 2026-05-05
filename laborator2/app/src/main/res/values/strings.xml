@@ -5,4 +5,11 @@
 
     <string name="name_text">Your name</string>
     <string name="btn_text">Click me</string>
+
+
+    <string-array name="days_options">
+        <item>1 zi</item>
+        <item>5 zile</item>
+        <item>10 zile</item>
+    </string-array>
 </resources>

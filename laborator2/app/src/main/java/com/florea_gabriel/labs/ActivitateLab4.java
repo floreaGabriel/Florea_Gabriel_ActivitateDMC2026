@@ -2,7 +2,6 @@ package com.florea_gabriel.labs;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -51,6 +50,7 @@ public class ActivitateLab4 extends AppCompatActivity {
         Button btnSettings = findViewById(R.id.buttonSettings);
         Button btnLab5Room = findViewById(R.id.buttonLab5Room);
         Button btnLab6Imagini = findViewById(R.id.buttonLab6Imagini);
+        Button btnLab10Weather = findViewById(R.id.buttonLab10Weather);
 
         adapter = new MagazinAdapter(this, magazine);
 
@@ -74,6 +74,11 @@ public class ActivitateLab4 extends AppCompatActivity {
 
         btnLab6Imagini.setOnClickListener(v -> {
             Intent intent = new Intent(ActivitateLab4.this, Lab9ImageActivity.class);
+            startActivity(intent);
+        });
+
+        btnLab10Weather.setOnClickListener(v -> {
+            Intent intent = new Intent(ActivitateLab4.this, Lab10Activity.class);
             startActivity(intent);
         });
 
